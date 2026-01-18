@@ -55,7 +55,7 @@ function App() {
 
   return (
     <main className="min-h-screen text-white selection:bg-cyan-500/30">
-      <nav className="fixed top-0 w-full z-50 glass border-x-0 border-t-0 py-4 transition-all duration-300">
+      <nav className="fixed top-0 w-full z-50 bg-[#030014]/60 backdrop-blur-xl border-b border-white/5 py-4 transition-all duration-300">
         <div className="container mx-auto px-6 flex justify-between items-center">
           <span className="text-2xl font-bold tracking-tighter">
             {data.aboutMe.fullName?.split(' ').map(n => n[0]).join('')}
