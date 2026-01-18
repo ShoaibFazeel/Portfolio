@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Mail, FileText, MapPin, ArrowRight } from 'lucide-react';
+import { FileText, MapPin, ArrowRight } from 'lucide-react';
 import type { AboutMe, Experience } from '../../types';
 import { urlFor } from '../../lib/sanity';
 import { Button } from '../ui/Components';
