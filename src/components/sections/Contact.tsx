@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Globe, Send, Mail, FileText, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, FileText, ExternalLink } from 'lucide-react';
 import type { AboutMe } from '../../types';
 import { Button } from '../ui/Components';
 
