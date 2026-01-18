@@ -14,7 +14,14 @@ export const ExperienceSection = ({ experience }: { experience: Experience[] }) 
             </div>
 
             <div className="relative max-w-4xl mx-auto space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-transparent before:via-gray-700 before:to-transparent md:before:ml-[10.5rem] md:space-y-12">
-                {[...experience].sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()).map((exp, index) => (
+                {[...experience].sort((a, b) => {
+                    const dateA = new Date(a.startDate).getTime();
+                    const dateB = new Date(b.startDate).getTime();
+                    // Handle invalid dates by placing them at the end
+                    if (isNaN(dateA)) return 1;
+                    if (isNaN(dateB)) return -1;
+                    return dateB - dateA;
+                }).map((exp, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, x: -20 }}

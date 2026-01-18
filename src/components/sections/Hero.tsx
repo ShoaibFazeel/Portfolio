@@ -26,7 +26,7 @@ export const Hero = ({ aboutMe, experience }: { aboutMe: AboutMe; experience?: E
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     {/* Left: Typography & Content */}
-                    <motion.div style={{ y: y1 }} className="flex flex-col items-center text-center">
+                    <motion.div style={{ y: y1 }} className="flex flex-col items-center text-center lg:pl-12">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -37,12 +37,12 @@ export const Hero = ({ aboutMe, experience }: { aboutMe: AboutMe; experience?: E
                                 {aboutMe.role}
                             </span>
 
-                            <h1 className="text-7xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-200 to-gray-600">
+                            <h1 className="text-7xl lg:text-9xl font-bold tracking-tighter leading-tight lg:leading-[0.9] mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-200 to-gray-600">
                                 {aboutMe.fullName.split(' ')[0]}
                                 <br />
                                 <span className="text-stroke-cyan text-transparent relative">
                                     {aboutMe.fullName.split(' ').slice(1).join(' ')}
-                                    <svg className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-full h-4 text-cyan-500/50" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                    <svg className="hidden lg:block absolute -bottom-4 left-1/2 -translate-x-1/2 w-full h-4 text-cyan-500/50" viewBox="0 0 100 10" preserveAspectRatio="none">
                                         <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
                                     </svg>
                                 </span>
@@ -53,7 +53,7 @@ export const Hero = ({ aboutMe, experience }: { aboutMe: AboutMe; experience?: E
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4, duration: 0.8 }}
-                            className="text-xl text-gray-400 max-w-xl leading-relaxed mb-10 mt-5 pl-0"
+                            className="text-xl text-gray-400 max-w-xl leading-relaxed mb-10 mt-5 pl-0 text-justify hyphens-auto"
                         >
                             {aboutMe.shortBio}
                         </motion.p>
