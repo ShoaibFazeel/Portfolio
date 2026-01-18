@@ -74,7 +74,7 @@ function App() {
         </div>
       </nav>
 
-      <Hero aboutMe={data.aboutMe} />
+      <Hero aboutMe={data.aboutMe} experience={data.experience} />
       {data.skills?.length > 0 && <Skills skills={data.skills} />}
       {data.projects?.length > 0 && <Projects projects={data.projects} />}
       {data.experience?.length > 0 && <ExperienceSection experience={data.experience} />}
