@@ -30,6 +30,7 @@ export const GROQ_QUERY = `
     "aboutMe": *[_type == "about" || _type == "aboutMe"][0] {
       ...,
       "fullName": coalesce(fullName, name),
+      "shortBio": coalesce(shortBio, bio, description),
       "profilePicture": coalesce(profilePicture, profileImage),
       "resumeLink": coalesce(resumeLink, resume.asset->url, resume, cv.asset->url, cv)
     },

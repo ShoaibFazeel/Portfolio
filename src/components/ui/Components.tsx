@@ -59,3 +59,25 @@ export const Tag = ({ children, className }: { children: React.ReactNode; classN
         {children}
     </span>
 );
+
+export const Modal = ({ isOpen, onClose, children }: { isOpen: boolean; onClose: () => void; children: React.ReactNode }) => {
+    if (!isOpen) return null;
+
+    return (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            <div
+                className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+                onClick={onClose}
+            />
+            <div className="relative w-full max-w-5xl max-h-[90vh] overflow-hidden glass-card-strong rounded-2xl shadow-2xl border border-white/10 flex flex-col md:flex-row">
+                <button
+                    onClick={onClose}
+                    className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors border border-white/10"
+                >
+                    ✖
+                </button>
+                {children}
+            </div>
+        </div>
+    );
+};
