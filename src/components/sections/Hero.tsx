@@ -40,7 +40,7 @@ export const Hero = ({ aboutMe, experience }: { aboutMe: AboutMe; experience?: E
                             <h1 className="text-7xl lg:text-9xl font-bold tracking-tighter leading-tight lg:leading-[0.9] mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-200 to-gray-600">
                                 {aboutMe.fullName.split(' ')[0]}
                                 <br />
-                                <span className="text-stroke-cyan text-transparent relative">
+                                <span className="text-stroke-cyan text-transparent relative tracking-normal lg:tracking-tighter">
                                     {aboutMe.fullName.split(' ').slice(1).join(' ')}
                                     <svg className="hidden lg:block absolute -bottom-4 left-1/2 -translate-x-1/2 w-full h-4 text-cyan-500/50" viewBox="0 0 100 10" preserveAspectRatio="none">
                                         <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -93,7 +93,7 @@ export const Hero = ({ aboutMe, experience }: { aboutMe: AboutMe; experience?: E
 
                     {/* Right: Floating Glass Card */}
                     {/* Adjusted position: 10% higher than baseline using negative margin */}
-                    <motion.div style={{ y: y2 }} className="relative block perspective-1000 mt-0 lg:-mt-80">
+                    <motion.div style={{ y: y2 }} className="relative block perspective-1000 mt-0 lg:-mt-70">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8, rotateY: -15, rotateX: 10 }}
                             animate={{ opacity: 1, scale: 1, rotateY: 0, rotateX: 0 }}
