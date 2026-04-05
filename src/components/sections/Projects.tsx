@@ -115,7 +115,7 @@ export const Projects = ({ projects }: { projects: Project[] }) => {
 
                                 <div className="mb-10">
                                     <h3 className="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">About the Project</h3>
-                                    <p className="text-gray-300 leading-relaxed text-sm">
+                                    <p className="text-gray-300 leading-relaxed text-sm" style={{ whiteSpace: 'pre-line' }}>
                                         {selectedProject.description}
                                     </p>
                                 </div>
