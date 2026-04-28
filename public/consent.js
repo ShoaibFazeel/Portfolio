@@ -1,7 +1,7 @@
 /**
  * FINAL PRODUCTION-READY GOOGLE CONSENT MODE v2
  */
-const GA_ID = 'G-Q605QRL3DB';
+const GA_ID = 'G-PY2SWD2WY4';
 const CONSENT_VERSION = 'v1.0';
 
 // -----------------------------
