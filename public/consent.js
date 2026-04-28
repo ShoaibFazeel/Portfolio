@@ -1,4 +1,4 @@
-const GA_ID = 'G-DNG1135CBB';
+const GA_ID = 'G-Q605QRL3DB';
 
 // Setup dataLayer and default consent state
 window.dataLayer = window.dataLayer || [];
